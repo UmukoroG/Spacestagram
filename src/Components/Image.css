@@ -1,0 +1,29 @@
+.nasaApi{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nasaApi_img{
+    height:200px;
+    width:200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.nasaApi_name{
+    max-width: 200px;
+    text-align: center;
+    margin: 12px 0px;
+}
+
+.nasaApi_name:hover{
+    max-width: 200px;
+    text-align: center;
+    margin: 12px 0px;
+    color: rgb(159, 192, 121);
+    cursor:pointer ;
+}
+

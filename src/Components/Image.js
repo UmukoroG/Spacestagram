@@ -1,13 +1,18 @@
 import React from 'react'
+import './Image.css';
 
 export default function Image({image}){
     return(
-        <div>
-            {/* <img src={image['links'][0]['href']} /> */}
-            <h1>Title:{image['data'][0]['title']}</h1>
-            <h1>Media type:{image['data'][0]['media_type']}</h1>
-            <h1>Date:{image['data'][0]['date_created']}</h1>
-        </div>
+        
+        <div className='nasaApi'>
+            <img 
+            className="nasaApi_img"
+            src={image['links'][0]['href']}
+            />
+            <p className="nasaApi_name"><b>{image['data'][0]['title']}</b></p>
+            
+            <p>{image['data'][0]['date_created']}</p>
+        </div> 
     )
 }
 
