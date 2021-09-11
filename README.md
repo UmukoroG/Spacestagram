@@ -5,10 +5,6 @@
 A webpage that pull images from NASA's API and allow users to "like" and "unlike" their favourite images among other functionalities.
 
 
-As of right now, website can sucessfully make request to nasa api and will be completed and deployed to firebase in the  next 24hrs.
-
-If you are from shopify , do me a favour and check again. Cheers!
-
 
 
 
