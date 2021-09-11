@@ -1,5 +1,13 @@
 # Getting Started with Create React App
 
+**Spacestagram**
+
+A webpage that pull images from NASA's API and allow users to "like" and "unlike" their favourite images among other functionalities.
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
