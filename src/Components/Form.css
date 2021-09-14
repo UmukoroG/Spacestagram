@@ -1,5 +1,5 @@
 
-  .app_searchForm {
+.app_searchForm {
     margin-top: 18px;
   }
   
@@ -67,4 +67,20 @@
 .signIn{
   margin-top: 5px;
   margin-left: 10px;
+}
+
+.imageOfDay{
+  width:450px;
+  height: 450px;
+
+  
+}
+
+.apod{
+  margin-top: 50px;
+}
+
+.imgText{
+  margin-top: 10px;
+  text-align: center;
 }
