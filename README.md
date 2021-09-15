@@ -2,9 +2,18 @@
 
 **Spacestagram**
 
+https://spacestagramm.web.app/
+
 A webpage that pull images from NASA's API and allow users to "like" and "unlike" their favourite images among other functionalities.
 
 
+I have Included the picture of the day and the like botton.
+I still need to work on the like functionality so a user can like and unlike a photo and see likes
+even after refreshing.
+
+I won't be using a log-inlog-out system to keep track of liked photos. I will be Local Storage to keep track of the users because there is not much to do once a user log in.
+
+I also need need to work on the API  as well as some image doesn't call due to certain url being an array of length 2 while some are just stand alone.
 
 
 
