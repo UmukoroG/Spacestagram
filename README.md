@@ -4,14 +4,12 @@
 
 https://spacestagram-b6d0d.web.app/
 
-A webpage that pull images from NASA's API and allow users to "like" and "unlike" their favourite images among other functionalities.
+A webpage that pull images from NASA's API and allow users to "like" and "unlike" their favourite images.
 
+![image](https://user-images.githubusercontent.com/61124647/133759160-fca88d14-2693-4f93-b5c3-13f3131645ed.png)
 
-I have Included the picture of the day and the like botton.
-I still need to work on the like functionality so a user can like and unlike a photo and see likes
-even after refreshing.
-
-I won't be using a log-inlog-out system to keep track of liked photos. I will be Local Storage to keep track of the users because there is not much to do once a user log in.
+I still need to work on the like functionality so a user can liked image after refreshing. I would be using LocalStorage just to
+keep track of the liked Images since I don't want to include a database or a login/logout system
 
 I also need need to work on the API  as well as some image doesn't call due to certain url being an array of length 2 while some are just stand alone.
 
