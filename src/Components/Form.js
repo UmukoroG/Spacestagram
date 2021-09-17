@@ -1,40 +1,50 @@
 import {useState, useEffect } from 'react';
 import './Form.css';
+import './Image.css';
 import Axios from 'axios';
 import Image from './Image';
-import Loader from 'react-loader-spinner';
 import * as ReactBootstrap from 'react-bootstrap';
+import { Player } from 'video-react';
 import { LocalStor } from './LocalStor';
+
 
 function Form() {
   const [search, setSearch]=useState("") 
-  const [images, setImages]=useState([])
+  const [images, setImages]=useState([])//array of images
 
   const [loading, setLoading]=useState(false);
-  const [apod,setApod]=useState(null)
+  const [apod,setApod]=useState(null);//picture of the day
+  const [media,setMedia]=useState("");
   
   
   var url=`https://images-api.nasa.gov/search?q=${search} `
   const [title, setTitle]=useState("")
   const [date, setDate]=useState("")
   const [description, setDescription]=useState("")
+  const [disable, setDisable]=useState(false);
 
   var urlApod=`https://api.nasa.gov/planetary/apod`
   const pictureOfTheDay=async()=>{
     try {
       const result=await Axios.get(`https://api.nasa.gov/planetary/apod?api_key=vMtA7TfsWPGpWypFgJFOXjcLpduV2lj59YMBp13r`)
       .then(res=>{
-        console.log(res);
+        // console.log(res);
+        setLoading(true);
         setApod(res.data.url)//set picture of the day
         setDate(res.data.date);
+        setMedia(res.data.media_type);
         setTitle(res.data.title);
         setDescription(res.data.explanation);
+        setTimeout(()=>{
+          setLoading(false);
+        },1000)
         
       });    
     } catch (e) {
       console.log(e)      
     }
   }
+
 
   useEffect(()=>{
     pictureOfTheDay();
@@ -44,12 +54,19 @@ function Form() {
     try {
       const result=await Axios.get(url)
       .then(res=>{
-        // console.log(res.data.collection.items);
-        setImages(res.data.collection.items)
-        setLoading(true);        
+        console.log(res.data.collection.items);
+        setLoading(true);
+        setImages(res.data.collection.items);
+        setTimeout(()=>{
+          setLoading(false);
+        },1000)
+                
       })
     } catch (e) {
       console.log(e);
+      setTimeout(()=>{
+        setLoading(false);
+      },1000)
       
     }
   }
@@ -65,7 +82,7 @@ function Form() {
 
 
 
-var words = ['"car"', '"boat"'];
+var words = ['"saturn"','"venus"', '"jupiter"','"mercury"', '"star"', '"galaxy"'];
 var input = words[Math.floor(Math.random() * words.length)];
 let searchPlaceholder=` try   ${input}`;
 
@@ -81,6 +98,7 @@ let searchPlaceholder=` try   ${input}`;
 
         <input type="submit"
         value="search"
+        href="#imageView"  //route to the image area?      
         className="app_submit"
         />
                
@@ -88,40 +106,37 @@ let searchPlaceholder=` try   ${input}`;
       </form>
 
       <div class="apod"> 
-      {/* picture of the day */}    
-      <img className='imageOfDay' src={apod} alt="" />
+      {/* picture or video of the day */}    
+      {/* conditional rendering of image or video */}
+      {
+        media != 'video' ?
+        <img 
+            className='imageOfDay'
+            src={apod}
+        /> :
+        <iframe className='imageOfDay' src={apod} controls />
+      }
       </div>
-      <div class='container'>
-        <p className="imgText" > PICTURE OF THE DAY  </p>
+      <div>
+        {
+          media != 'video' ?
+          <p className="imgText" > PICTURE OF THE DAY  </p>
+          :
+          <p className="imgText" > VIDEO OF THE DAY  </p>
+        } 
         <p className="imgText"><b>{title}</b></p>
-        {/* <p className="imgText" >{description}</p> */}
         <p className="imgText">{date}</p>  
       </div>   
 
-      <div className="images">
 
-              
-        {/* array of images from API */}
-
-        {images.map(image=>{
-            return <Image image={image}/>
-        })}
-
-              
-
-        {/* {loading ? (
-          images.map(image=>{
-            return <Image image={image}/>
-          })) : <ReactBootstrap.Spinner animation="border" />} */}
+      <div id="imageView" className="images">
+        {/* A loader before api finishes calling */}
         
-
-         {/* A loader before api finishes */}
-        
-        {/* { loading ? ( <ReactBootstrap.Spinner animation="border" />) :
+        { loading ? <div style={{ position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}> ( < ReactBootstrap.Spinner animation="border" variant="success" />) </div> :
           images.map(image=>{
             return <Image image={image}/>
           })
-        } */}
+        }
 
         
 

@@ -1,15 +1,14 @@
 import react from 'react';
 import './App.css';
 import Form from './Components/Form';
-import { Link} from "react-router-dom";
-;
-
+import LocalStor from './Components/LocalStor';
 
 
 function App() {
   return (
     <div className="app">
       <Form/>
+      {/* <LocalStor/> */}
     </div>
   );
 }

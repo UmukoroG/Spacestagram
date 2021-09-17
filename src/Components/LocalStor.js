@@ -1,7 +1,7 @@
 import React from 'react'
 var uniqid = require('uniqid');
 
-export const LocalStor = () => {
+function LocalStor(){
     const myStorage = window.localStorage;
     const id=uniqid();
     // localStorage.setItem('user', id);
@@ -17,3 +17,5 @@ export const LocalStor = () => {
         </div>
     )
 }
+
+export default LocalStor;

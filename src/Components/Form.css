@@ -60,12 +60,5 @@
 .imgText{
   margin-top: 10px;
   text-align: center;
-  font-size: 9px;
-  word-break: break-word;
 }
 
-/* @media screen and (min-width: 350px) {
- .imgText {
-    font-size: 10px;
-  }
-} */
