@@ -8,7 +8,7 @@ A webpage that pull images from NASA's API and allow users to "like" and "unlike
 
 ![image](https://user-images.githubusercontent.com/61124647/133759160-fca88d14-2693-4f93-b5c3-13f3131645ed.png)
 
-I still need to work on the like functionality so a user can liked image after refreshing. I would be using LocalStorage just to
+I still need to work on the like functionality so a user can see liked image after refreshing. I would be using LocalStorage just to
 keep track of the liked Images since I don't want to include a database or a login/logout system
 
 I also need need to work on the API  as well as some image doesn't call due to certain url being an array of length 2 while some are just stand alone.
