@@ -2,7 +2,7 @@
 
 **Spacestagram**
 
-https://spacestagramm.web.app/
+https://spacestagram-b6d0d.web.app/
 
 A webpage that pull images from NASA's API and allow users to "like" and "unlike" their favourite images among other functionalities.
 
