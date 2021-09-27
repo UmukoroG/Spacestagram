@@ -1,13 +1,12 @@
 import react from 'react';
 import './App.css';
-import Form from './Components/Form';
-import LocalStor from './Components/LocalStor';
+import Index from './Components/Index';
 
 
 function App() {
   return (
     <div className="app">
-      <Form/>
+      <Index/>
       {/* <LocalStor/> */}
     </div>
   );
