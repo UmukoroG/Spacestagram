@@ -10,7 +10,7 @@ The picture of the day renders image most days but also renders short video clip
 so I am using conditional rendering in the case of video or image.
 
 There is no database in this projects, so when a user like/unlike an image, the data is stored
-in the LocalStorage on the user computer since this is more focused on the front end.
+in the LocalStorage on the user browser since this is more focused on the front end.
 
 ![image](https://user-images.githubusercontent.com/61124647/133759160-fca88d14-2693-4f93-b5c3-13f3131645ed.png)
 
