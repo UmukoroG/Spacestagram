@@ -6,13 +6,14 @@ https://spacestagram-b6d0d.web.app/
 
 A webpage that pull images from NASA's API and allow users to "like" and "unlike" their favourite images.
 
-![image](https://user-images.githubusercontent.com/61124647/133759160-fca88d14-2693-4f93-b5c3-13f3131645ed.png)
-
 The picture of the day renders image most days but also renders short video clips as well,
 so I am using conditional rendering in the case of video or image.
 
 There is no database in this projects, so when a user like/unlike an image, the data is stored
 in the LocalStorage on the user computer since this is more focused on the front end.
+
+![image](https://user-images.githubusercontent.com/61124647/133759160-fca88d14-2693-4f93-b5c3-13f3131645ed.png)
+
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
